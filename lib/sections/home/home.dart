@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:my_portfolio/sections/home/homeDesktop.dart';
+import 'package:my_portfolio/sections/home/homeMobile.dart';
+import 'package:my_portfolio/sections/home/homeTab.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+class HomePage extends StatefulWidget {
+  HomePage({Key key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      desktop: HomeDesktop(),
+      mobile: HomeMobile(),
+      tablet: HomeTab(),
+    );
+  }
+}
